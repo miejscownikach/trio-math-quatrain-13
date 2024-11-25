@@ -1,0 +1,3 @@
+rm utiltest
+make utiltest
+./utiltest > utiltest.csv

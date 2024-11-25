@@ -1,0 +1,135 @@
+list of functions:
+inc(x) - 0
+	increment
+		upward pointing equilateral triangle with base line
+dec(x) - 1
+	decrement
+		downward pointing equilateral triangle with base line
+add(x,y) - 2
+	add
+		side by side rectangles
+neg(x) - 3
+	negate
+		circle
+mul(x,y) - 4
+	multiply
+		grid 2x2 of rectangles
+
+questions:
+	unique random questions are shuffled, with a fraction of them getting repeated.
+choices:
+	correct answer and all answers in range, or 4 random answers, whichever is less. shuffled.
+
+incorrect answers trigger review, like a captcha.
+
+function for incorrect answers: correct_answer * (0.6+random_float(0,1)*0.2) < fake_answer < correct_answer*(1.2+random_float(0,1)*0.2)
+if fake answer > 99 fake answer = 99
+if fake answer < -99 fake answer = -99
+
+function numbers: above
+
+
+	lesson 1
+	(increment and decrement of unsigned integers)
+
+    multiple choice:
+   
+inc(0) = 0, 1
+dec(1) = 0, 1
+inc(1) = 0, 1, 2
+dec(2) = 0, 1, 2
+inc(inc(0)) = 0, 1, 2
+dec(dec((2)) = 0, 1, 2
+inc(2) = 0, 1, 2, 3
+dec(3) = 0, 1, 2, 3
+inc(inc(1) = 0, 1, 2, 3
+dec(dec(3) = 0, 1, 2, 3
+inc(inc(inc(0))) = 0, 1, 2, 3
+dec(dec(dec(3))) = 0, 1, 2, 3
+inc(3) = 0, 1, 2, 3, 4
+inc(4) = 0, 1, 2, 3, 4, 5
+inc(5) = 0, 1, 2, 3, 4, 5, 6
+inc(6) = 0 < a < 7
+inc(7) = 0 < a < 8
+inc(8) = 0 < a < 9
+(we come back to this later, that nesting increment functions is multiplication by 1)
+
+homework:
+above, but 0 < answer < 9
+
+	lesson 2
+	(addition and properties of addition)
+
+	multiple choice:
+
+add(0,0) = 0, 1
+add(0,1) = 0, 1, 2
+add(1,0) = 0, 1, 2
+^ commutative property of addition
+	in random homework, use pairs of addends to learn commutative property
+
+add(1,1) = 0 < a < 4
+add(0<x<3,0<y<3) = 0 < a < 8
+add(add(1,2),3) = 0 < a < 8
+add(1,add(2,3)) = 0 < a < 8
+^ associative property of addition
+
+practice
+add(0<x<3,0<y<3) = 0 < a < 6
+
+	lesson 3
+	(signed integers)
+
+dec(0) = -1 < a < 1
+neg(1)=1*-1= -1 < a < 1
+add(neg(2),3)= -9 < a < 9
+add(2,neg(3))= -9 < a < 9
+neg(add(1,2))= -9 < a < 9
+dec(-1)
+dec(-2)
+dec(-3>x>-8)
+
+	lesson 4
+	(place value)
+
+inc(9) = 0xA = 10
+inc(10) = 0 < a < 11 = 0xB
+inc(11) = 0 < a < 12 = 0xC
+...
+inc(14) = 0 < a < 15 = 0xF
+inc(15) = 0 < a < 16 = 0x10
+inc(16) = 0 < a < 17 = 0x11
+inc(17) = 0 < a < 18 = 0x12
+inc(18) = 0 < a < 19 = 0x13
+inc(19) = 0 < a < 20 = 0x14
+inc(20) = 0 < a < 21 = 0x15
+
+review
+inc(0<x<20) = 0 < a < 21
+
+add(0<x<9,0<x<9) = 0 < (a/2) < 9
+(we come back to this, this is *=2)
+
+add(0<x<9,0<y<9) = 0 < a < 20
+(many repetitions of this, it is the recursive function required to add large numbers)
+
+	lesson 5
+	(negation and adding)
+coin flip of
+add(neg(0<x<9),0<y<9)= -20 < a < 20
+or
+add(0<x<9,neg(0<y<9))= -20 < a < 20
+
+(tradition calls add(x,neg(y)) subtraction of y from x.)
+
+	lesson 6
+	(multiplication)
+0
+add(0,-9<x<9)
+add(add(0,-9<x<9),-9<x<9)
+add(add(add(0,-9<x<9),-9<x<9),-9<x<9)
+mul(-9<x<9,0)
+mul(-9<x<9,1)
+mul(-9<x<9,2)
+mul(-9<x<9,3)
+mul(-9<x<9,-10,y,10)
