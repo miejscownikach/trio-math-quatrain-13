@@ -1,5 +1,3 @@
-1PtqN3vHMXsB3JfHHmdq6wdzRv5qH72kDU
-
 for crowdfunding and identity
 
 # making education less bad, if possible (starting with math) -- no promises
