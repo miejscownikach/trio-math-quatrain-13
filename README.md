@@ -1,5 +1,3 @@
-for crowdfunding and identity
-
 # making education less bad, if possible (starting with math) -- no promises
 
 # no idea if liballegro will make this work dynamically linked on a fresh install, your mileage may vary, as may your cubic metres and mililitres of aluminium.
